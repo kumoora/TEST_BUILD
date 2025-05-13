@@ -30,6 +30,7 @@ jobs:
 
       - name: Run Pytest and generate report
         run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/DEV
           pytest DEV/tests/ --junitxml=test-results.xml
 
       - name: Upload Test Results
