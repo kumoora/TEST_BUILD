@@ -3,12 +3,12 @@ name: Run Unit Tests for Snowflake Python SP
 on:
   push:
     paths:
-      - 'sp/**.py'
-      - 'tests/**.py'
+      - 'DEV/sp/**.py'
+      - 'DEV/tests/**.py'
   pull_request:
     paths:
-      - 'sp/**.py'
-      - 'tests/**.py'
+      - 'DEV/sp/**.py'
+      - 'DEV/tests/**.py'
 
 jobs:
   test:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Pytest and generate report
         run: |
-          pytest tests/ --junitxml=test-results.xml
+          pytest DEV/tests/ --junitxml=test-results.xml
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
