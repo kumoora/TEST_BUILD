@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Pytest and generate report
         run: |
-          pytest DEV/tests/ --junitxml=test-results.xml
+          pytest tests/ --junitxml=test-results.xml
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
