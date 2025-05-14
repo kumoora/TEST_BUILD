@@ -7,7 +7,7 @@ def test_process_score_good():
 def test_process_score_average():
     assert process_score(65) == "Average"
 def test_process_score_poor():
-    assert process_score(45) == "Excellent"
+    assert process_score(45) == "Poor"
 def test_process_score_invalid_low():
     with pytest.raises(ValueError, match="Score must be between 0 and 100"):
         process_score(-5)
